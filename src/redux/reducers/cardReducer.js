@@ -30,7 +30,7 @@ function card(state = initialState, action) {
           data_query = data_query.filter((q_card) =>{ return q_card.id !== card.id})
       })
 
-      state = {
+      state = { 
           ...state,
           query: data_query
       }

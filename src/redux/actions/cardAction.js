@@ -15,7 +15,7 @@ export function getCard() {
 export function getSearch(name) {
   return function (dispatch) {
     return Axios.get(
-      "http://localhost:3030/api/cards?limit=30&name=" + name + "&type=normal"
+      `http://localhost:3030/api/cards?limit=20&name${name}`
     ).then((card) => {
       dispatch({ type: "SET_QUERY", data: card.data });
     });

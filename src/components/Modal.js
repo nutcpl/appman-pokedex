@@ -23,8 +23,8 @@ function Modalcard() {
     dispatch(getSearch(key));
   };
 
-  const addToList = async (card) => {
-    await dispatch(addIoList(card));
+  const addToList = async (idcard) => {
+    await dispatch(addIoList(idcard));
   };
 
   useEffect(() => {}, []);
