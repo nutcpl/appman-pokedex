@@ -1,0 +1,23 @@
+.thisfooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ec5656;
+  z-index: 0;
+}
+
+.addbtn {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ec5656;
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  text-align: center;
+}

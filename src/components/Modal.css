@@ -1,0 +1,76 @@
+.modal {
+  background-color: #000000a3;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  margin: auto;
+  width: 900px;
+  height: 678px;
+}
+
+.modal-body {
+  width:  100%;
+  height: 678px;
+}
+
+.modalheader {
+  width: 100%;
+  height: 10%;
+  overflow: hidden;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  background-color: white;
+}
+
+.addbtn {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ec5656;
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.search {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.searchimg {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  width: 5%;
+  height: 40px;
+}
+
+#searchinput {
+  width: 100%;
+  height: 50px;
+  border-color: #e6e6e6;
+  box-shadow: 2px 2px #d5d6dc;
+}
+
+.card {
+  background-color: #f3f4f7;
+}
+
+.card:hover {
+  box-shadow: 2px 2px #aeaeae;
+}
+
+.addtoPokedex {
+  display: none;
+}
+
+.card-body:hover .addtoPokedex {
+  display: block;
+  color: #dc7777;
+  font-size: 25px;
+}

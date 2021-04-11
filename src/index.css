@@ -3,6 +3,7 @@ body {
   padding: 0;
   /*font-family: sans-serif;*/
   font-family: 'Atma', cursive;
+  
 }
 
 #root {
@@ -37,4 +38,20 @@ body {
   right: -79px;
   top: 50%;
   border: 1px inset #7b7b7b;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

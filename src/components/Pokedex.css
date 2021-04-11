@@ -1,0 +1,31 @@
+.mypokedex {
+  width: 100%;
+  height: 590px;
+  position: absolute;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background-color: #f3f4f7;
+}
+
+.card:hover {
+  box-shadow: 2px 2px #aeaeae;
+}
+
+.delfromPokedex {
+  display: none;
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+.card-body:hover .delfromPokedex {
+  display: block;
+  color: #dc7777;
+  font-size: 25px;
+}
