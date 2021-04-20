@@ -23,8 +23,8 @@ function card(state = initialState, action) {
 
     case "SET_QUERY":
       //รับข้อมูลที่ได้จากการค้นหา
-      let data_query = action.data.cards;
-
+      let data_query = action.data;
+      console.log(data_query)
       //ลบ card ที่มีอยู่ selected แล้ว
       state.selected.map((card) => {
           data_query = data_query.filter((q_card) =>{ return q_card.id !== card.id})

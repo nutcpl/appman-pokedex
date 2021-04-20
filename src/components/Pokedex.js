@@ -21,7 +21,7 @@ function Pokedex() {
           ? card.selected.map((item, index) => {
               // console.log(item)
               return (
-                <div key={index}>
+                <div className="wrapper" key={index}>
                   {/* cardlist */}
                   
            
