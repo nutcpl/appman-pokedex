@@ -1,11 +1,11 @@
 .modal {
   background-color: #000000a3;
   position: absolute;
-  right: 0;
-  top: 100px;
+  right: 40px;
+  top: 65px;
   margin: auto;
-  width: 900px;
-  height: 678px;
+  width: 860px;
+  height: 730px;
 }
 
 .modal-body {
@@ -73,4 +73,9 @@
   display: block;
   color: #dc7777;
   font-size: 25px;
+}
+
+.progress-bar {
+  background-color: #f3701a;
+  border-radius: 20px;
 }

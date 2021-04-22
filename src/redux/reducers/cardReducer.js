@@ -27,7 +27,7 @@ function card(state = initialState, action) {
       console.log(data_query)
       //ลบ card ที่มีอยู่ selected แล้ว
       state.selected.map((card) => {
-          data_query = data_query.filter((q_card) =>{ return q_card.id !== card.id})
+        return data_query = data_query.filter((q_card) =>{ return q_card.id !== card.id})
       })
 
       state = { 
