@@ -33,7 +33,7 @@ function Modalcard() {
     if (Array.isArray(attack) && attack.length > 0) {
       // console.log(attack.length)
 
-      return attack.length * 50
+      return attack.length * 50;
     } else {
       return 0;
     }
@@ -41,22 +41,21 @@ function Modalcard() {
 
   const HP = (hp) => {
     hp_ = 0;
-    console.log(hp)
-    let intHP = parseInt(hp)
-    if(intHP !== NaN && intHP > 0){
-      if(intHP >= 100){
-      hp_ = 100 
-      console.log("hp > 100 " + hp_)
-      return hp_
-    } else if(intHP < 0){
-      hp_ = 0
-      return hp_
-      }else
-      hp_ = intHP
-      return hp_ ;
-  } else {
-    hp_ = 0
-      return hp_
+    console.log(hp);
+    let intHP = parseInt(hp);
+    if (intHP !== NaN && intHP > 0) {
+      if (intHP >= 100) {
+        hp_ = 100;
+        console.log("hp > 100 " + hp_);
+        return hp_;
+      } else if (intHP < 0) {
+        hp_ = 0;
+        return hp_;
+      } else hp_ = intHP;
+      return hp_;
+    } else {
+      hp_ = 0;
+      return hp_;
     }
   };
 
@@ -64,48 +63,43 @@ function Modalcard() {
     weak_ = 0;
     if (Array.isArray(weak) && weak.length > 0) {
       console.log("weak " + weak_);
-      weak_ = weak.length * 100
-      return weak_ ;
+      weak_ = weak.length * 100;
+      return weak_;
     } else {
       return 0;
     }
-    
   };
 
   const Happiness = (attack) => {
     // parseInt
     let alldamage = 0;
-    // "" + ค่าใดๆจะต้องให้เป็น 0
     // console.log(attack);
     if (Array.isArray(attack) && attack.length > 0 && attack !== undefined) {
       attack.map((dm) => {
         if (dm.damage === "") {
-          alldamage += 0;
-        } else {
-          alldamage += parseInt(dm.damage);
-        }
+          alldamage = 0
+        }  else {
+            alldamage += parseInt(dm.damage);
+          }
+        
       });
       console.log("all damage" + alldamage);
-   
     } else {
-     alldamage = 0;
+      alldamage = 0;
     }
-    console.log(hp_, alldamage, weak_) 
-    const happy = ((hp_ / 10) + (alldamage /10 ) + 10 - (weak_ /100)) / 5
-    console.log(happy)
-    let happyResult = []
+    console.log(hp_, alldamage, weak_);
+    const happy = (hp_ / 10 + alldamage / 10 + 10 - weak_ / 100) / 5;
+    console.log(happy);
+    let happyResult = [];
 
-    for(let i=0; i<happy; i++){ 
-      happyResult.push("")
+    for (let i = 0; i < happy; i++) {
+      happyResult.push("");
     }
-    
-    return happyResult
 
-
+    return happyResult;
   };
 
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div>
@@ -228,13 +222,14 @@ function Modalcard() {
                                     </div>
                                   </p>
                                   {Happiness(info.attacks).map((val) => {
-                                    return <img
-                                    style={{ width: "50px" }}
-                                    src={cute}
-                                    alt={info.name}
-                                  />
+                                    return (
+                                      <img
+                                        style={{ width: "50px" }}
+                                        src={cute}
+                                        alt={info.name}
+                                      />
+                                    );
                                   })}
-                                  
                                 </div>
 
                                 <div className="col-2">

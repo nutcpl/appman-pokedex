@@ -97,7 +97,7 @@ function Pokedex() {
                   <div className="card m-2">
                     <div className="card-body">
                       <div className="row">
-                        <div className="col-4">
+                        <div className="col-5">
                           <img
                             style={{ width: "100%" }}
                             src={item.imageUrl}
@@ -105,12 +105,12 @@ function Pokedex() {
                           />
                         </div>
 
-                        <div className="col-8">
+                        <div className="col-7">
                           <h5 className="card-title">{item.name}</h5>
                           <p className="card-text">
                             <div className="row">
-                              <div className="col-3">HP</div>
-                              <div className="col-9">
+                              <div className="col-4">HP</div>
+                              <div className="col-8">
                                 <div
                                   className="progress"
                                   style={{ height: 20 }}
@@ -129,8 +129,8 @@ function Pokedex() {
                           </p>
                           <p className="card-text">
                             <div className="row">
-                              <div className="col-3">STR</div>
-                              <div className="col-9">
+                              <div className="col-4">STR</div>
+                              <div className="col-8">
                                 <div
                                   className="progress"
                                   style={{ height: 20 }}
@@ -151,8 +151,8 @@ function Pokedex() {
                           </p>
                           <p className="card-text">
                             <div className="row">
-                              <div className="col-3">WEAK</div>
-                              <div className="col-9">
+                              <div className="col-4">WEAK</div>
+                              <div className="col-8">
                                 <div
                                   className="progress"
                                   style={{ height: 20 }}
@@ -171,15 +171,19 @@ function Pokedex() {
                               </div>
                             </div>
                           </p>
-                          {Happiness(item.attacks).map((val) => {
-                            return (
-                              <img
-                                style={{ width: "50px" }}
-                                src={cute}
-                                alt={item.name}
-                              />
-                            );
-                          })}
+                          <div className="row">
+                            <div className="col-12">
+                              {Happiness(item.attacks).map((val) => {
+                                return (
+                                  <img
+                                    style={{ width: "35px", height: "35px" }}
+                                    src={cute}
+                                    alt={item.name}
+                                  />
+                                );
+                              })}
+                            </div>
+                          </div>
                         </div>
 
                         <p
